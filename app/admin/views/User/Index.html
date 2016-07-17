@@ -1,0 +1,37 @@
+
+<ol class="breadcrumb">
+    <li>Users</li>
+</ol>
+
+<a href="#User/Create" class="btn btn-primary pull-right">Create New</a>
+
+<legend >User Accounts</legend>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>
+        Name
+      </th>
+      <th>
+        Type
+      </th>
+      <th>
+      	Email
+      </th>
+      <th>
+        Date
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+  {{each users}}
+  <tr class="alt">
+		<td><a href="#User/View/${guid}">${name}</a></td>
+		<td>${userType}</td>
+		<td>${email}</td>
+		<td>{{html $item.formatDate(date)}}</td>
+  </tr>
+  {{/each}}
+  </tbody>
+</table>

@@ -1,0 +1,33 @@
+<div>
+  <ol class="breadcrumb">
+      <li>Pages</li>
+  </ol>
+
+  <a href="#Page/Create" class="btn btn-primary pull-right">Create New</a>
+
+  <legend>Page List</legend>
+  
+	<table class="table table-bordered table-striped">
+	  <thead>
+	    <tr>
+	      <th>
+	      	Title
+	      </th>
+	      <th>
+	        Url
+	      </th>
+	      <th>Date</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	  {{each pages}}
+	  <tr class="alt">
+			<td><a href="#Page/Edit/${url}"> ${title}</a></td>
+			<td><a href="/${url}" target="_blank">${url}</a></td>
+			<td>{{html $item.date(date)}}</td>
+	  </tr>
+	  {{/each}}
+	  </tbody>
+	</table>
+	
+</div>

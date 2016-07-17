@@ -1,0 +1,32 @@
+<div>
+  <ol class="breadcrumb">
+    <li>Zones</li>
+  </ol>
+
+  <div class="pull-right btn-group">
+  	<a href="#Zone/Create" class="btn btn-primary">Create New</a>
+  </div>
+
+  <legend>Zone List</legend>
+
+	<table class="table table-bordered table-striped">
+	  <thead>
+	    <tr>
+	      <th>
+	      	Key
+	      </th>
+	      <th>
+	        Content
+	      </th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	  {{each zones}}
+	  <tr class="alt">
+			<td><a href="#Zone/Edit/${key}"> ${key} </a></td>
+			<td>${content}</td>
+	  </tr>
+	  {{/each}}
+	  </tbody>
+	</table>
+</div>

@@ -1,0 +1,32 @@
+<div>
+	<ol class="breadcrumb">
+    <li>Files</li>
+  </ol>
+
+	<div class="pull-right btn-group">
+    <a href="#File/Upload" class="btn btn-primary">Upload</a>
+  </div>
+	
+	<legend>File List</legend>
+	
+	<table class="table table-bordered table-striped">
+	  <thead>
+	    <tr>
+	      <th>
+	      	url
+	      </th>
+	      <th>
+	        full path
+	      </th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	  {{each files}}
+	  <tr class="alt">
+			<td><a href="/content/files/${this}">${this}</a></td>
+			<td>/content/files/${this} <a href="${this}" class="btn pull-right btn-mini btn-danger deleteFileBtn">delete</a></td>
+	  </tr>
+	  {{/each}}
+	  </tbody>
+	</table>
+</div>

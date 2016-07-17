@@ -1,0 +1,22 @@
+<div>
+  <ol class="breadcrumb">
+    <li><a href="#Zone">Zones</a> <span class="divider">/</span></li>
+    <li>Edit ${zone.key}</li>
+  </ol>
+
+  <form class="form">
+    <input name="key" type="hidden" value="${zone.key}" />
+
+    <div class="pull-right btn-group">
+      <a href="#null" class="btn" id="delete">Delete</a>
+      <a href="#Zone" class="btn">Cancel</a>
+      <a href="#null" class="btn btn-primary" id="save">Save</a>
+    </div>
+    
+    <legend>Edit Zone <strong>${zone.key}</strong></legend>
+    
+    <label>
+      Body</label>
+      <textarea name="content">${zone.content}</textarea>
+  </form>
+</div>

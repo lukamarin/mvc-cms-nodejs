@@ -1,0 +1,20 @@
+<div>
+  <ol class="breadcrumb">
+    <li><a href="#Template">Template</a> <span class="divider">/</span></li>
+    <li>Edit</li>
+  </ol>
+  <a href="#null" class="btn-primary pull-right btn submit" id="save">Save</a>
+  <form class="form" action="/campaign/submit" method="post">
+  
+    <legend>Edit <span>Temp</span></legend>
+
+    <div name="content" 
+      id="editor" 
+      class="file-editor-textarea" 
+      rows="35" 
+      name="value" 
+      data-language="HTML" 
+      data-filename="detail.html">${template.content}</div>
+    
+  </form>
+</div>
